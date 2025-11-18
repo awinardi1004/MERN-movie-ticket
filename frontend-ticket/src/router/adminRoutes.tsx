@@ -1,5 +1,7 @@
 import type { RouteObject } from 'react-router-dom';
 import AdminLoginPage from '../pages/AdminLoginPage';
+import AdminOverview from '@/pages/AdminOverview';
+import AdminLayout from '@/components/adminLayout';
 
 const adminRoutes: RouteObject[] = [
     {
@@ -8,7 +10,11 @@ const adminRoutes: RouteObject[] = [
     },
     {
         path: "/admin",
-        element: "Admin Page"
+        element: <AdminLayout/>,
+        children: [
+            { index: true, element: <AdminOverview /> },
+            { path: "/admin/genres", element: "Admin Genres Page" },
+        ]
     }
 ];
 
