@@ -43,6 +43,7 @@ export function LoginFormAdmin({
     try {
       const response = await mutateAsync(val)
       secureLocalStorage.setItem('SESSION_KEY', response.data);
+      
 
       navigate('/admin');
     } catch (error) {
