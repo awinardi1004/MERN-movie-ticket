@@ -4,6 +4,7 @@ import secureLocalStorage from 'react-secure-storage';
 import { twMerge } from "tailwind-merge"
 
 export const SESSION_KEY = "SESSION_KEY";
+export const LOCATION_POSSIONS = ["Jakarta", "Bandung", "Bekasi"];
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))

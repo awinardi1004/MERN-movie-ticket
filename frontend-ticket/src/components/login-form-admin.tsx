@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { loginSchema, type loginValue, login } from "@/services/auth/auth.service" // ✅ IMPORT login
+import { loginSchema, type loginValue, login } from "@/services/auth/auth.service"
 import { zodResolver } from "@hookform/resolvers/zod"
 import React from "react"
 import { useForm } from "react-hook-form"
@@ -34,7 +34,7 @@ export function LoginFormAdmin({
 
   const navigate = useNavigate();
 
-  // ✅ GUNAKAN SERVICE YANG SUDAH ADA
+
   const {isPending, mutateAsync} = useMutation({
     mutationFn: login
   })

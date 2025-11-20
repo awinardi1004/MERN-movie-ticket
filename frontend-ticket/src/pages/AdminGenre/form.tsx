@@ -33,7 +33,7 @@ export default function AdminGrenreForm() {
 
         navigate('/admin/genres')
         
-        toast.success(`Genre data duccesfull ${detail === undefined } ? "created" :"updated `)
+        toast.success(`Genre data successfully ${detail === undefined ? "created" : "updated"}`);
       } catch (error) {
         console.log(error)
         toast.error("something went error")
