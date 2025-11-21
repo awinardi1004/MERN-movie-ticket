@@ -14,7 +14,7 @@ export default function AdminTheater() {
         <TitleHeading title='List Theater'/>
         <div>
             <Link to={'/admin/theaters/create'}>
-              <Button as={Link} to="/admin/genre/create" className="mb-3 flex items-center">
+              <Button className="mb-3 flex items-center">
                 <Plus className="w-4 h-4 mr-2" />
                 Add Data
               </Button>

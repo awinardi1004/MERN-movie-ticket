@@ -10,6 +10,7 @@ export interface Movie {
   thumbnail: string
   price: number
   available: boolean
+  bonus: string
   thumbnailUrl: string
   id: string
 }

@@ -9,6 +9,8 @@ import AdminGrenreForm from '@/pages/AdminGenre/form';
 import AdminTheater from '@/pages/AdminTheater';
 import { getDetailTheater, getTheaters } from '@/services/theater/theater.service';
 import AdminTheaterForm from '@/pages/AdminTheater/form';
+import AdminMovie from '@/pages/AdminMovie';
+import { getMovies } from '@/services/movie/movie.service';
 
 const adminRoutes: RouteObject[] = [
     {
@@ -85,6 +87,15 @@ const adminRoutes: RouteObject[] = [
                     return detail.data
                 },
                 element: <AdminTheaterForm />
+            },
+            {
+                path: "/admin/movies",
+                loader: async () => {
+                    const genres = await getMovies();
+
+                    return genres.data;
+                },
+                element: <AdminMovie />
             }
             
         ]

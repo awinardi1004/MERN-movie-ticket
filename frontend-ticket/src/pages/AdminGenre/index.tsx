@@ -15,7 +15,7 @@ export default function AdminGenre() {
         <TitleHeading title='List Genre' />
         <div>
             <Link to={'/admin/genres/create'}>
-              <Button as={Link} to="/admin/genre/create" className="mb-3 flex items-center">
+              <Button className="mb-3 flex items-center">
                 <Plus className="w-4 h-4 mr-2" />
                 Add Data
               </Button>
