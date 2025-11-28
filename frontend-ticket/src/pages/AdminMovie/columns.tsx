@@ -3,6 +3,7 @@ import type { ColumnDef } from "@tanstack/react-table"
 // import ActionColum from "./actionColum";
 import type { Movie } from "@/services/movie/movie.type";
 import { rupiahFormat } from "@/lib/utils";
+import ActionColum from "./actionColumn";
 
 export const columns: ColumnDef<Movie>[] = [
   {
@@ -68,7 +69,7 @@ export const columns: ColumnDef<Movie>[] = [
     cell: ({row}) => {
         const movie = row.original;
 
-        return <div>action column</div>
+        return <ActionColum id={movie._id} />;
     }
   }
 ]

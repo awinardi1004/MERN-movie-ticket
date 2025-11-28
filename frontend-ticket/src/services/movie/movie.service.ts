@@ -32,7 +32,7 @@ export const getDetailMovie = (id: string): Promise<baseResponse<Movie>> =>
     privateInstance.get(`/admin/movies/${id}`).then((res) => res.data);
 
 export const updateMovie = (data: FormData, id: string) => 
-    privateInstance.put(`/admin/movis/${id}`, data, {
+    privateInstance.put(`/admin/movies/${id}`, data, {
         headers: {
             "Content-Type": "multipart/form-data",
         },
